@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Larissa Martins — Odontologia Estética | Natal-RN</title>
+<link rel="canonical" href="https://dralarissafmartins.com.br/">
+<!-- Google tag (gtag.js) — Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11362481873"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-11362481873');
 </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dra. Larissa Martins — Odontologia Estética | Natal-RN</title>
 <meta name="description" content="Dra. Larissa Martins, cirurgiã-dentista especialista em Prótese Dentária. Facetas em resina, laminados cerâmicos e reabilitação estética com odontologia humanizada em Natal-RN.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -427,6 +427,19 @@
   onScroll();window.addEventListener('scroll',onScroll,{passive:true});
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  /* ---- Rastreamento de clique no WhatsApp (Google Ads) ---- */
+  var WA_CONVERSION='AW-11362481873/qLcWCJCtieQcENHthqoq';
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href*="wa.me"]');
+    if(!a) return;
+    var url=a.getAttribute('href');
+    if(typeof gtag==='function'){
+      gtag('event','conversion',{send_to:WA_CONVERSION,value:1.0,currency:'BRL'});
+      gtag('event','click_whatsapp',{event_category:'contato',event_label:url,transport_type:'beacon'});
+    }
+    if(window.dataLayer){window.dataLayer.push({event:'whatsapp_click',link_url:url});}
+  },true);
 </script>
 </body>
 </html>
